@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: #968daf;
+    min-height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    'nav nav'
+    'menu main'
+    'footer footer';
+}
+
+nav {
+    grid-area: nav;
+    background-color: #2f3999d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+nav h1 {
+    color: #f1ebeb;
+    font-size: 2em;
+    width: 95%;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #252919;
+}
+
+nav a:hover {
+    color: #ff2e09;
+}
+
+nav .icon {
+    font-size: 2rem;
+}
+
+menu {
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    row-gap: 0.4em;
+}
+
+menu h4 {
+    color: #2f3999d7;
+    font-size: 1.8em;
+    font-weight: 900;
+}
+
+menu .menu-item {
+    display: flex;
+    gap: 0.3em;
+}
+
+.menu-item a,p {
+    color:#2f3999d7;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.menu-item a:hover {
+    color: #252919;
+    text-shadow: 2px 2px 2px #aa0ca2;
+}
+
+.menu-item a:active {
+    color: #992e04;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 1em;
+    gap: 1.5em;
+}
+
+.main-grid-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5%;
+    overflow: hidden;
+    background-color: #f0c5d5;
+    box-shadow: 2px 2px 6px #C7B7A3;
+    align-items: center;
+}
+
+.main-grid-item:hover {
+    box-shadow: 4px 4px 10px #2f3999d7;
+}
+
+.main-grid-item img {
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 5%;
+}
+
+.main-grid-item a:hover {
+    opacity: 70%;
+}
+
+.main-grid-item a:active {
+    opacity: 40%;
+}
+
+.main-grid-item h3 {
+    color: #2f3999d7;
+    margin: 0.5em;
+    font-size: 1.5em;
+}
+
+.main-grid-item p {
+    color: #2f3999d7;
+    margin: 2em 0.5em 0.5em 0.5em;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.main-grid-item button {
+    background-color: #2f3999d7;
+    color: #08cafa;
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+.main-grid-item button:hover {
+    background-color: hsl(345, 98%, 50%);
+    color: #2f3999d7;
+}
+
+.main-grid-item button:active {
+    background-color: #7e5929;
+    color: #2f3999d7;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #2f3999d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    color: #F1F1F1;
+    margin: 1em;
+    font-size: 1em;
+}
